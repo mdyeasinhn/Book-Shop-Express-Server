@@ -21,7 +21,7 @@ const createBook = async (req: Request, res: Response) => {
             message: "Something went wrong",
             error,
         });
-      
+
     }
 };
 
@@ -31,7 +31,7 @@ const getProducts = async (req: Request, res: Response) => {
         const result = await bookService.getProducts()
         res.json({
             message: "Books geting successfully",
-             result,
+            result,
         });
 
     } catch (error) {
@@ -40,7 +40,7 @@ const getProducts = async (req: Request, res: Response) => {
             message: "Something went wrong",
             error,
         });
-      
+
     }
 };
 
@@ -51,7 +51,7 @@ const getSpecificProduct = async (req: Request, res: Response) => {
         const result = await bookService.getSpecificProduct(bookId)
         res.json({
             message: "Specific book geting successfully",
-             result,
+            result,
         });
 
     } catch (error) {
@@ -64,7 +64,7 @@ const getSpecificProduct = async (req: Request, res: Response) => {
 };
 
 
-// ----> Update user controller <----
+// ----> Update Book controller <----
 const updateBook = async (req: Request, res: Response) => {
     try {
         const bookId = req.params.bookId;
@@ -72,8 +72,8 @@ const updateBook = async (req: Request, res: Response) => {
 
         const result = await bookService.updateBook(bookId, body)
         res.json({
-            message: "User updated successfully",
-             result,
+            message: "Book updated successfully",
+            result,
         });
 
     } catch (error) {
@@ -84,15 +84,15 @@ const updateBook = async (req: Request, res: Response) => {
         });
     }
 };
-// ----> Delete user controller <----
+// ----> Delete Book controller <----
 
 const deleteBook = async (req: Request, res: Response) => {
     try {
         const bookId = req.params.bookId;
-             await bookService.deleteBook(bookId)
+        await bookService.deleteBook(bookId)
         res.json({
-            message: "User deleted successfully",
-             result:{},
+            message: "Book deleted successfully",
+            result: {},
         });
 
     } catch (error) {
@@ -106,10 +106,10 @@ const deleteBook = async (req: Request, res: Response) => {
 
 
 // ----> export <----
-export const bookController ={
+export const bookController = {
     createBook,
     getProducts,
-   getSpecificProduct,
-   updateBook,
-   deleteBook,
+    getSpecificProduct,
+    updateBook,
+    deleteBook,
 }
