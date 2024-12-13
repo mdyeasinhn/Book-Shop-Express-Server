@@ -7,7 +7,7 @@ const bookSchema = new Schema({
   },
   author: {
     type: String,
-    required: [true, 'The author name is required. Please provide the author of the book.']
+    required: [true, 'The author name is required. Please provide the author of the book.'],
   },
   price: {
     type: Number,
