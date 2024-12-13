@@ -47,13 +47,12 @@ const getProducts = async (req: Request, res: Response) => {
 // ----> Get single Product controller <----
 const getSpecificProduct = async (req: Request, res: Response) => {
     try {
-        const bookId = req.params.id;
-        const result = await bookService.getSpecificProduct(bookId)
+        const bookId = req.params.bookId;
+        const result = await bookService.getSpecificProduct(bookId);
         res.json({
             message: "Specific book geting successfully",
-            result,
+            data: result,
         });
-
     } catch (error) {
         res.json({
             status: false,
@@ -68,7 +67,8 @@ const getSpecificProduct = async (req: Request, res: Response) => {
 const updateBook = async (req: Request, res: Response) => {
     try {
         const bookId = req.params.bookId;
-        const body = req.body
+        const body = req.body;
+        console.log(bookId);        
 
         const result = await bookService.updateBook(bookId, body)
         res.json({

@@ -6,3 +6,7 @@ const orderRouter = Router();
 
 
 orderRouter.post('/', orderController.createOrder);
+
+
+
+export default orderRouter ;

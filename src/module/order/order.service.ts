@@ -26,5 +26,5 @@ const createOrder = async (payload: IOrder): Promise<IOrder> => {
 }
 
 export const orderService = {
-    createOrder
+    createOrder,
 }

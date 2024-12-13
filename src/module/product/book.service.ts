@@ -22,7 +22,7 @@ const updateBook = async (id: string, data: IBook) => {
     return result;
 }
 
-const deleteBook = async (id: string,) => {
+const deleteBook = async (id: string) => {
     const result = await Book.findByIdAndDelete(id);
     return result;
 }

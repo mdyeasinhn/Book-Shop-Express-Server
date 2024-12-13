@@ -9,11 +9,11 @@ import { bookController } from "./book.controller";
 const bookRouter = Router();
 
 
-bookRouter.get('/', bookController.getProducts);
 bookRouter.post('/create-book', bookController.createBook);
+bookRouter.get('/', bookController.getProducts);
 bookRouter.get('/:bookId', bookController.getSpecificProduct);
 bookRouter.put('/:bookId', bookController.updateBook);
-bookRouter.put('/:bookId', bookController.deleteBook);
+bookRouter.delete('/:bookId', bookController.deleteBook);
 
 
 export default bookRouter;

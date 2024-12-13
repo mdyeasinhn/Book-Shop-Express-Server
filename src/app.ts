@@ -1,6 +1,8 @@
 import express, { Application, Request, Response } from "express";
 import cors from "cors";
-import userRouter from "./module/product/book.route";
+import bookRouter from "./module/product/book.route";
+import orderRouter from "./module/order/order.route";
+
 const app: Application = express();
 
 
@@ -8,7 +10,8 @@ const app: Application = express();
 app.use(express.json());
 app.use(cors());
 
-app.use('/api/products', userRouter)
+app.use('/api/products', bookRouter)
+app.use('/api/orders', orderRouter)
 
 app.get("/", (req: Request, res: Response) => {
   res.send({
