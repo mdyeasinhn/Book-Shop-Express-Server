@@ -1,10 +1,10 @@
-Book Shop Management System
+# Book Shop Management System
 
-Objective
+## Objective
 
 Develop a robust Book Store application using Express and TypeScript, with MongoDB integration via Mongoose for database operations. Ensure data integrity and enforce validation through Mongoose schemas.
 
-Project Setup
+# Project Setup
 
 Prerequisites
 
@@ -18,30 +18,30 @@ Prerequisites
 
 
 
-Features
+# Features
 
 1. CRUD Operations for Books (Product Model)
 
-Create a new book entry.
+- Create a new book entry.
 
-Read details of books or fetch a list of all books.
+- Read details of books or fetch a list of all books.
 
-Update book information such as quantity or price.
+- Update book information such as quantity or price.
 
-Delete a book from the collection.
+- Delete a book from the collection.
 
 2. CRUD Operations for Orders
 
-Create a new order by specifying the product and quantity.
+- Create a new order by specifying the product and quantity.
 
-Read an order by ID or list all orders.
+- Read an order by ID or list all orders.
 
-Update the order's quantity.
+- Update the order's quantity.
 
-Delete an order.
+- Delete an order.
 
 3. Validation and Error Handling
 
-Ensures data integrity with Mongoose schema validation.
+- Ensures data integrity with Mongoose schema validation.
 
-Custom error responses include a stack trace and an explanation.
+- Custom error responses include a stack trace and an explanation.

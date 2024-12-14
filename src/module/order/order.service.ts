@@ -29,7 +29,7 @@ const revenueCalculate = async (): Promise<{ totalRevenue: number }> => {
     const result = await Order.aggregate([
       {
         $lookup: {
-          from: 'products', 
+          from: 'books', 
           localField: 'product',
           foreignField: '_id',
           as: 'productDetails',

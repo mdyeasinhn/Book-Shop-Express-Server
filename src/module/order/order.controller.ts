@@ -6,6 +6,7 @@ const createOrder = async (req: Request, res: Response) => {
     try {
         const order = req.body;
         const result = await orderService.createOrder(order);
+        console.log(order)
 
         res.json({
             status: true,
@@ -42,5 +43,4 @@ const revenueCalculate = async (req: Request, res: Response): Promise<void> => {
 export const orderController = {
     createOrder,
     revenueCalculate,
-
 }

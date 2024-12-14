@@ -31,7 +31,7 @@ const getProducts = async (req: Request, res: Response) => {
         const result = await bookService.getProducts()
         res.json({
             message: "Books retrieved successfully",
-            result,
+            data : result,
         });
 
     } catch (error) {
@@ -48,7 +48,9 @@ const getProducts = async (req: Request, res: Response) => {
 const getSpecificProduct = async (req: Request, res: Response) => {
     try {
         const bookId = req.params.bookId;
+        console.log(req.params);
         const result = await bookService.getSpecificProduct(bookId);
+
         res.json({
             message: "Book retrieved successfully",
             data: result,
