@@ -30,7 +30,7 @@ const getProducts = async (req: Request, res: Response) => {
     try {
         const result = await bookService.getProducts()
         res.json({
-            message: "Books geting successfully",
+            message: "Books retrieved successfully",
             result,
         });
 
@@ -50,7 +50,7 @@ const getSpecificProduct = async (req: Request, res: Response) => {
         const bookId = req.params.bookId;
         const result = await bookService.getSpecificProduct(bookId);
         res.json({
-            message: "Specific book geting successfully",
+            message: "Book retrieved successfully",
             data: result,
         });
     } catch (error) {
@@ -68,12 +68,12 @@ const updateBook = async (req: Request, res: Response) => {
     try {
         const bookId = req.params.bookId;
         const body = req.body;
-        console.log(bookId);        
+               
 
         const result = await bookService.updateBook(bookId, body)
         res.json({
             message: "Book updated successfully",
-            result,
+            data : result,
         });
 
     } catch (error) {

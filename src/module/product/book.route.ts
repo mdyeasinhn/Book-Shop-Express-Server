@@ -9,7 +9,7 @@ import { bookController } from "./book.controller";
 const bookRouter = Router();
 
 
-bookRouter.post('/create-book', bookController.createBook);
+bookRouter.post('/', bookController.createBook);
 bookRouter.get('/', bookController.getProducts);
 bookRouter.get('/:bookId', bookController.getSpecificProduct);
 bookRouter.put('/:bookId', bookController.updateBook);

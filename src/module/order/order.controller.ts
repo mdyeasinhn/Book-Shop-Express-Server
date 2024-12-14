@@ -21,7 +21,26 @@ const createOrder = async (req: Request, res: Response) => {
     }
 }
 
-export const orderController ={
+const revenueCalculate = async (req: Request, res: Response): Promise<void> => {
+    try {
+        const revenue = await orderService.revenueCalculate()
+
+        res.json({
+            message: 'Revenue calculated successfully',
+            status: true,
+            data: revenue
+        })
+    } catch (error) {
+        res.json({
+            message: 'Failed to calculate revenue',
+            status: false,
+            error,
+        })
+    }
+}
+
+export const orderController = {
     createOrder,
-    
+    revenueCalculate,
+
 }

@@ -25,6 +25,40 @@ const createOrder = async (payload: IOrder): Promise<IOrder> => {
     return order
 }
 
+const revenueCalculate = async (): Promise<{ totalRevenue: number }> => {
+    const result = await Order.aggregate([
+      {
+        $lookup: {
+          from: 'products', 
+          localField: 'product',
+          foreignField: '_id',
+          as: 'productDetails',
+        },
+      },
+      {
+        $unwind: '$productDetails',
+      },
+      {
+        $group: {
+          _id: null,
+          totalRevenue: {
+            $sum: { $multiply: ['$quantity', '$productDetails.price'] },
+          },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          totalRevenue: 1,
+        },
+      },
+    ])
+  
+    return result[0] || { totalRevenue: 0 } 
+  }
+  
+
 export const orderService = {
     createOrder,
+    revenueCalculate,
 }

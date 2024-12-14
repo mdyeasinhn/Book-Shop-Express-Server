@@ -6,6 +6,7 @@ const orderRouter = Router();
 
 
 orderRouter.post('/', orderController.createOrder);
+orderRouter.get('/revenue', orderController.revenueCalculate);
 
 
 
