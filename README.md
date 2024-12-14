@@ -2,7 +2,7 @@ Book Shop Management System
 
 Objective
 
-Develop a robust Book Store application using Express and TypeScript, with MongoDB integration via Mongoose for database operations. Ensure data integrity and enforce validation through Mongoose schemas.
+Book Store application using Express and TypeScript, with MongoDB integration via Mongoose for database operations. Ensure data integrity and enforce validation through Mongoose schemas.
 
 Project Setup
 
