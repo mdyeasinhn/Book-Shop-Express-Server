@@ -2,7 +2,7 @@
 
 ## Objective
 
-Develop a robust Book Store application using Express and TypeScript, with MongoDB integration via Mongoose for database operations. Ensure data integrity and enforce validation through Mongoose schemas.
+Book Store application using Express and TypeScript, with MongoDB integration via Mongoose for database operations. Ensure data integrity and enforce validation through Mongoose schemas.
 
 # Project Setup
 
@@ -44,4 +44,8 @@ Prerequisites
 
 - Ensures data integrity with Mongoose schema validation.
 
+<<<<<<< HEAD
 - Custom error responses include a stack trace and an explanation.
+=======
+Custom error responses include a stack trace and an explanation.
+>>>>>>> 10eab08d7f1a02810e99f673e2a3113f10e06e2e
